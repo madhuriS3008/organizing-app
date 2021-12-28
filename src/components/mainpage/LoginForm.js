@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import classes from "./LoginForm.module.css";
 import Card from "../ui/Card";
+import AuthContext from "../../store/auth-context";
 
-const LoginForm = (props) => {
+const LoginForm = () => {
+  const authCtx = useContext(AuthContext);
+
   const [enteredEmail, setEnteredEmail] = useState("");
   const [emailIsTouched, setEmailIsTouched] = useState(false);
   const [enteredPassword, setEnteredPassword] = useState("");
@@ -38,7 +41,7 @@ const LoginForm = (props) => {
     event.preventDefault();
     console.log(enteredEmail);
     console.log(enteredPassword);
-    props.onLogin(enteredEmail);
+    authCtx.onLogin();
     setEnteredEmail("");
     setEnteredPassword("");
     setEmailIsTouched(false);
