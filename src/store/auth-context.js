@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const AuthContext = React.createContext({
   login: null,
@@ -8,13 +9,16 @@ const AuthContext = React.createContext({
 
 export const AuthProvider = (props) => {
   const [login, setLogin] = useState(false);
+  const history = useHistory();
 
   const loginHandler = () => {
     setLogin(true);
+    history.push("/home");
   };
 
   const logoutHandler = () => {
     setLogin(false);
+    history.replace("/");
   };
 
   const authContext = {

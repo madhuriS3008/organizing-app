@@ -5,6 +5,11 @@ import { useContext } from "react";
 
 function MainNav() {
   const authCtx = useContext(AuthContext);
+
+  const logoutHandler = () => {
+    authCtx.onLogout();
+  };
+
   return (
     <header className={classes.header}>
       {!authCtx.login && (
@@ -14,7 +19,9 @@ function MainNav() {
       )}
       {authCtx.login && (
         <Link to="/home">
-          <div className={classes.logo}>Many Odds To Organizing</div>
+          <div className={classes.logo}>
+            <p>Many Odds To Organizing</p>
+          </div>
         </Link>
       )}
       <nav>
@@ -41,7 +48,7 @@ function MainNav() {
             </li>
           )}
           {authCtx.login && (
-            <li>
+            <li onClick={logoutHandler}>
               <Link to="/logout">
                 <div className={classes.button}>Logout</div>
               </Link>
