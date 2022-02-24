@@ -59,36 +59,33 @@ const LoginForm = () => {
     <Card>
       <h1>Login</h1>
       <form onSubmit={formSubmissionHandler}>
-        <div>
-          <div className={emailClasses}>
-            <label htmlFor="email">Email</label>
-            <input
-              type="text"
-              id="email"
-              onChange={emailChangeHandler}
-              onBlur={emailBlurHandler}
-              value={enteredEmail}
-            />
-            {emailHasError && (
-              <p className={classes.error}>Enter Valid Email.</p>
-            )}
-          </div>
-          <div className={passwordClasses}>
-            <label htmlFor="password"> Password </label>
-            <input
-              type="password"
-              id="password"
-              onChange={passwordChangeHandler}
-              onBlur={passwordBlurHandler}
-              value={enteredPassword}
-            />
-            {passwordHasError && (
-              <p className={classes.error}>
-                Password should be atleast 7 characters
-              </p>
-            )}
-          </div>
+        <div className={emailClasses}>
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            onChange={emailChangeHandler}
+            onBlur={emailBlurHandler}
+            value={enteredEmail}
+          />
+          {emailHasError && <p className={classes.error}>Enter Valid Email.</p>}
         </div>
+        <div className={passwordClasses}>
+          <label htmlFor="password"> Password </label>
+          <input
+            type="password"
+            id="password"
+            onChange={passwordChangeHandler}
+            onBlur={passwordBlurHandler}
+            value={enteredPassword}
+          />
+          {passwordHasError && (
+            <p className={classes.error}>
+              Password should be atleast 7 characters
+            </p>
+          )}
+        </div>
+
         <div className={classes.actions}>
           <button disabled={!formIsValid}>Login</button>
         </div>

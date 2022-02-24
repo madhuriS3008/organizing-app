@@ -1,5 +1,7 @@
+import Finance from "../components/finances/Finance";
+
 const FinancesPage = () => {
-  return <p>My finances plan</p>;
+  return <Finance />;
 };
 
 export default FinancesPage;

@@ -11,7 +11,7 @@ import MyPages from "./pages/MyPages";
 function App() {
   return (
     <Layout>
-    <h1>Welcome</h1>
+      {/* <h1>Welcome</h1> */}
       <Switch>
         <Route path="/signup">
           <SignupPage />

@@ -1,15 +1,18 @@
 .form label {
   font-weight: bold;
+  text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
 .form input {
   font: inherit;
+  display: block;
   padding: 0.5rem;
   border-radius: 6px;
   border: 1px solid #ccc;
   max-width: 100%;
-  margin-top: 1rem;
-  margin-left: 1rem;
+  overflow: hidden;
+  /* margin-top: 1rem;
+  margin-left: 1rem; */
 }
 .form input:focus {
   outline: none;

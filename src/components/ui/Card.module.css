@@ -1,11 +1,12 @@
 .card {
-  width: 100%;
+  width: 95%;
+  height: 70vh;
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
   text-align: center;
-  height: 400px;
-  /* box-sizing: content-box; */
-  /* margin: 50px; */
+
+  /* box-sizing: content-box;
+   margin: 50px; */
 }
