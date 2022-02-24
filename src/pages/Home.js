@@ -1,5 +1,7 @@
-const HomePage = () => {
-  return <div>Welcome to organizing your day</div>;
+import HomePage from "../components/Home/HomePage";
+
+const Home = () => {
+  return <HomePage />;
 };
 
-export default HomePage;
+export default Home;

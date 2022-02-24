@@ -4,7 +4,7 @@ import "./App.css";
 import Layout from "./components/layout/Layout";
 import LandingPage from "./pages/Landing";
 import SignupPage from "./pages/Signup";
-import HomePage from "./pages/Home";
+import Home from "./pages/Home";
 import FinancesPage from "./pages/Finances";
 import MyPages from "./pages/MyPages";
 
@@ -17,7 +17,7 @@ function App() {
           <SignupPage />
         </Route>
         <Route path="/home">
-          <HomePage />
+          <Home />
         </Route>
         <Route path="/finances">
           <FinancesPage />
