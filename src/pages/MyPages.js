@@ -1,5 +1,7 @@
+import MyPage from "../components/myPages/MyPage";
+
 const MyPages = () => {
-  return <p>My days organizing</p>;
+  return <MyPage />;
 };
 
 export default MyPages;

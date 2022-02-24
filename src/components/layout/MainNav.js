@@ -28,9 +28,9 @@ function MainNav() {
         <ul>
           {!authCtx.login && (
             <li>
-              <Link to="/signup">
+              <NavLink activeClassName={classes.active} to="/signup">
                 <div className={classes.button}>Signup</div>
-              </Link>
+              </NavLink>
             </li>
           )}
           {authCtx.login && (
