@@ -20,7 +20,7 @@ function MainNav() {
       {authCtx.login && (
         <Link to="/home">
           <div className={classes.logo}>
-            <p>Many Odds To Organizing</p>
+            <p>Many Odds To Organizing(MOTO)</p>
           </div>
         </Link>
       )}

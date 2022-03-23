@@ -57,8 +57,8 @@ const LoginForm = () => {
   console.log(passwordClasses);
   return (
     <Card>
-      <h1>Login</h1>
-      <form onSubmit={formSubmissionHandler}>
+      <h1 className={classes.head}>Login</h1>
+      <form onSubmit={formSubmissionHandler} className={classes.form}>
         <div className={emailClasses}>
           <label htmlFor="email">Email</label>
           <input
